@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jets</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
@@ -32,7 +32,7 @@
     </a>
 
     <div style="width: 655px; height: 438px; left: 69px; top: 891px; position: absolute">
-        <a href="{% url 'light_jets' %}">
+        <a href="{% url 'light' %}">
             <img style="width: 655px; height: 313px; left: 0px; top: 125px; position: absolute; border-radius: 50px; border: 3px black solid"
                 src="{% static 'Images/light.png' %}" />
             <div
@@ -45,7 +45,7 @@
         </a>
     </div>
 
-    <a href="{% url 'heavy_jets' %}">
+    <a href="{% url 'heavy' %}">
         <div style="width: 655px; height: 438px; left: 1187px; top: 891px; position: absolute">
             <img style="width: 655px; height: 313px; left: 0px; top: 125px; position: absolute; border-radius: 50px; border: 3px black solid"
                 src="{% static 'Images/heavy.png' %}" />
@@ -60,7 +60,7 @@
     </a>
 
     <div style="width: 655px; height: 445px; left: 617px; top: 485px; position: absolute">
-        <a href="{% url 'vip_airliner' %}">
+        <a href="{% url 'airline' %}">
             <img style="width: 655px; height: 313px; left: 0px; top: 132px; position: absolute; border-radius: 50px; border: 3px black solid"
                 src="{% static 'Images/airline.png' %}" />
             <div
@@ -83,14 +83,14 @@
         </div>
     </div>
 
-    <a href="{% url 'about_us' %}">
+    <a href="{% url 'aboutUs' %}">
         <div
             style="width: 254px; height: 82px; left: 597px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
             About us
         </div>
     </a>
 
-    <a href="{% url 'booked_flights' %}">
+    <a href="{% url 'booked' %}">
         <div
             style="width: 470px; height: 82px; left: 1073px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
             Booked flights
