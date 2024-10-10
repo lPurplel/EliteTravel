@@ -1,48 +1,108 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heavy jets</title>
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
+
 <body>
-    <div style="width: 1920px; height: 1460px; position: relative; background: #3A3A3A; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
-        <img style="width: 1920px; height: 1460px; left: 0px; top: 0px; position: absolute" src="https://via.placeholder.com/1920x1460" />
-        <div style="width: 1856px; height: 117px; left: 32px; top: 0px; position: absolute"></div>
-        <img style="width: 525px; height: 257px; left: 694px; top: 162px; position: absolute" src="https://via.placeholder.com/525x257" />
-        <div style="width: 1854px; height: 1004px; left: 30px; top: 428px; position: absolute; background: rgba(255, 255, 255, 0.20); border-radius: 50px; border: 3px black solid"></div>
-        <div style="width: 1530px; height: 95px; left: 195px; top: 59px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid"></div>
-        <div style="width: 172px; height: 82px; left: 376px; top: 63px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">Home</div>
-        <div style="width: 172px; height: 82px; left: 901px; top: 63px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">Jets</div>
-        <div style="width: 178.01px; height: 0px; left: 898px; top: 145px; position: absolute; transform: rotate(-0.64deg); transform-origin: 0 0; border: 3px #D2983A solid"></div>
-        <div style="width: 254px; height: 82px; left: 597px; top: 63px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">Sbout us</div>
-        <div style="width: 470px; height: 82px; left: 1073px; top: 69px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">Booked flights</div>
-        <img style="width: 215.48px; height: 309.77px; left: -17px; top: -74.58px; position: absolute; transform: rotate(-10deg); transform-origin: 0 0" src="https://via.placeholder.com/215x310" />
-        <img style="width: 215.48px; height: 309.77px; left: 1936px; top: -74.58px; position: absolute; transform: rotate(-170deg); transform-origin: 0 0" src="https://via.placeholder.com/215x310" />
-        <img style="width: 1920px; height: 1460px; left: 0px; top: 0px; position: absolute" src="https://via.placeholder.com/1920x1460" />
-        <div style="width: 1856px; height: 117px; left: 32px; top: 0px; position: absolute"></div>
-        <img style="width: 525px; height: 257px; left: 694px; top: 162px; position: absolute" src="https://via.placeholder.com/525x257" />
-        <div style="width: 1854px; height: 1004px; left: 30px; top: 428px; position: absolute; background: rgba(255, 255, 255, 0.20); border-radius: 50px; border: 3px black solid"></div>
-        <div style="width: 1530px; height: 95px; left: 195px; top: 59px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid"></div>
-        <div style="width: 172px; height: 82px; left: 376px; top: 63px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">Home</div>
-        <div style="width: 778px; height: 624px; left: 116px; top: 618px; position: absolute">
-          <img style="width: 778px; height: 501px; left: 0px; top: 123px; position: absolute; border-radius: 50px; border: 3px black solid" src="https://via.placeholder.com/778x501" />
-          <div style="width: 681px; height: 91px; left: 49px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid"></div>
-          <div style="left: 169px; top: 14px; position: absolute; text-align: center; color: #D2983A; font-size: 65px; font-family: Parisienne; font-weight: 400; line-height: 65px; word-wrap: break-word">Gulfstream G300</div>
+  <div
+    style="width: 1920px; height: 1460px; position: relative; background: #3A3A3A; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+    <img style="width: 1920px; height: 1460px; left: 0px; top: 0px; position: absolute"
+      src="{% static 'Images/back.png'%}" />
+    <div style="width: 1856px; height: 117px; left: 32px; top: 0px; position: absolute"></div>
+    <img style="width: 525px; height: 257px; left: 694px; top: 162px; position: absolute"
+      src="{% static 'Images/EliteTravel.png'%}" />
+    <div
+      style="width: 1854px; height: 1004px; left: 30px; top: 428px; position: absolute; background: rgba(255, 255, 255, 0.20); border-radius: 50px; border: 3px black solid">
+    </div>
+    <div
+      style="width: 1530px; height: 95px; left: 195px; top: 59px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
+    </div>
+    <a href="{% url 'home'%}">
+      <div
+        style="width: 172px; height: 82px; left: 376px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        Home</div>
+    </a>
+
+
+    <div style="width: 778px; height: 624px; left: 116px; top: 618px; position: absolute">
+
+      <a href="{% url 'heavy1'%}">
+        <img
+          style="width: 778px; height: 501px; left: 0px; top: 123px; position: absolute; border-radius: 50px; border: 3px black solid"
+          src="{% static 'Images/hcabin1.png'%}" />
+        <div
+          style="width: 681px; height: 91px; left: 49px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
         </div>
-        <div style="width: 778px; height: 624px; left: 1025px; top: 618px; position: absolute">
-          <img style="width: 778px; height: 501px; left: 0px; top: 123px; position: absolute; border-radius: 50px; border: 3px black solid" src="https://via.placeholder.com/778x501" />
-          <div style="width: 681px; height: 91px; left: 49px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid"></div>
-          <div style="left: 72px; top: 14px; position: absolute; text-align: center; color: #D2983A; font-size: 65px; font-family: Parisienne; font-weight: 400; line-height: 65px; word-wrap: break-word">Bombardier Global 7500</div>
+        <div
+          style="width: 681px; height: 91px; left: 49px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
         </div>
-        <div style="width: 178px; height: 82px; left: 898px; top: 63px; position: absolute">
-          <div style="width: 172px; height: 82px; left: 3px; top: 0px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">Jets</div>
-          <div style="width: 178.01px; height: 0px; left: 0px; top: 82px; position: absolute; transform: rotate(-0.64deg); transform-origin: 0 0; border: 3px #D2983A solid"></div>
+        <div
+          style="left: 117px; top: 20px; position: absolute; text-align: center; color: #D2983A; font-size: 65px; font-family: Parisienne; font-weight: 400; line-height: 65px; word-wrap: break-word">
+          Gulfstream G300</div>
+      </a>
+    </div>
+    <div style="width: 778px; height: 624px; left: 1025px; top: 618px; position: absolute">
+      <a href="{% url 'heavy2'%}">
+        <img
+          style="width: 778px; height: 501px; left: 0px; top: 123px; position: absolute; border-radius: 50px; border: 3px black solid"
+          src="{% static 'Images/hcabin2.png'%}" />
+        <div
+          style="width: 681px; height: 91px; left: 49px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
         </div>
-        <div style="width: 254px; height: 82px; left: 597px; top: 63px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">About us</div>
-        <div style="width: 470px; height: 82px; left: 1073px; top: 69px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">Booked flights</div>
-        <img style="width: 215.48px; height: 309.77px; left: -17px; top: -74.58px; position: absolute; transform: rotate(-10deg); transform-origin: 0 0" src="https://via.placeholder.com/215x310" />
-        <img style="width: 215.48px; height: 309.77px; left: 1936px; top: -74.58px; position: absolute; transform: rotate(-170deg); transform-origin: 0 0" src="https://via.placeholder.com/215x310" />
+        <div
+          style="left: 87px; top: 20px; position: absolute; text-align: center; color: #D2983A; font-size: 65px; font-family: Parisienne; font-weight: 400; line-height: 65px; word-wrap: break-word">
+          Bombardier Global 7500</div>
+      </a>
+
+    </div>
+    <div style="width: 178px; height: 82px; left: 898px; top: 80px; position: absolute">
+      <a href="{% url 'jets'%}">
+        <div
+          style="width: 172px; height: 82px; left: 3px; top: 0px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+          Jets</div>
+        <div
+          style="width: 178.01px; height: 0px; left: 0px; top: 65px; position: absolute; transform: rotate(-0.64deg); transform-origin: 0 0; border: 2px #D2983A solid">
+        </div>
+      </a>
+
+
+    </div>
+    <a href="{% url 'aboutUs'}">
+      <div
+        style="width: 254px; height: 82px; left: 597px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        About us</div>
+    </a>
+
+    <a href="{% url 'booked'%}">
+      <div
+        style="width: 470px; height: 82px; left: 1073px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        Booked flights</div>
+    </a>
+
+    <img
+      style="width: 265.48px; height: 309.77px; left: -5px; top: -45px; position: absolute; transform: rotate(-10deg); transform-origin: 0 0"
+      src="{% static 'Images/wings1.png' %}" />
+    <img
+      style="width: 265.48px; height: 309.77px; left: 1670px; top: -90px; position: absolute; transform: rotate(370deg); transform-origin: 0 0"
+      src="{% static 'Images/wings2.png' %}" />
+    <div style="width: 377px; height: 91px; left: 7px; top: 483px; position: absolute">
+      <div
+        style="width: 241px; height: 91px; left: 80px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
       </div>
+      <a href="{% url 'jets'%}">
+        <div
+          style="width: 377px; left: 0px; top: 20px; position: absolute; text-align: center; color: #D2983A; font-size: 65px; font-family: Parisienne; font-weight: 400; line-height: 65px; word-wrap: break-word">
+          Back</div>
+    </div>
+    </a>
+
+  </div>
 </body>
+
 </html>
