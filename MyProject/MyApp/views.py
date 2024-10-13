@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import Booking_Form
+import pdb
 
 # Create your views here.
 
@@ -45,4 +47,13 @@ def booked(request):
     return render(request, "booked.html")
 
 def booking(request):
-    return render(request, "booking.html")
+    if request.method == 'POST':
+        form = Booking_Form(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('booked')
+        else:
+            print(form.errors)
+    else:
+        form = Booking_Form()
+    return render(request, 'booking.html', {'form': form})

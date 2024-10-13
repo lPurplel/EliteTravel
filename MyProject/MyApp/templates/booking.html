@@ -42,58 +42,75 @@
     <div
       style="width: 438px; height: 80px; left: 116px; top: 880px; position: absolute; background: white; border-radius: 50px; border: 3px black solid">
     </div>
-    <div
-      style="width: 172px; height: 82px; left: 376px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
-      Home</div>
+    <a href="{% url 'home'%}">
+      <div
+        style="width: 172px; height: 82px; left: 376px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        Home</div>
+    </a>
+
     <div
       style="left: 822px; top: 459px; position: absolute; text-align: center; color: #D2983A; font-size: 100px; font-family: Parisienne; font-weight: 400; line-height: 100px; word-wrap: break-word">
       Booking</div>
-    <div
-      style="width: 1000px; height: 82px; left: 131px; top: 594px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
-      <input type="email" placeholder="Email"
-        style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;" />
 
-    </div>
-    <div
-      style="width: 500px; height: 82px; left: 131px; top: 744px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
-      <select
-        style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-      </select>
-    </div>
-    <div
-      style="width: 400px; height: 82px; left: 131px; top: 873px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
-      <select
-        style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-      </select>
-    </div>
-    <div
-      style="width: 450px; height: 82px; left: 716px; top: 873px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
-      <select
-        style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-      </select>
-    </div>
+    <form method="post" action="{% url 'booking' %}">
+      {% csrf_token %}
+      <div
+        style="width: 1000px; height: 82px; left: 131px; top: 594px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        <input type="email" id="id_email" name="email" placeholder="Email"
+          style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;" />
+      </div>
+      <div
+        style="width: 500px; height: 82px; left: 131px; top: 744px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        <select id="id_plane_name" name="plane_name"
+          style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;">
+          <option value="light1">Cessna C525 Citation</option>
+          <option value="light2">Embraer Phenom 300E</option>
+          <option value="airline1">A320</option>
+          <option value="airline2">A380</option>
+          <option value="heavy1">Gulfstream G300</option>
+          <option value="heavy2">Bombardier Global 7500</option>
+        </select>
+      </div>
+      <div
+        style="width: 400px; height: 82px; left: 131px; top: 873px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        <select id="id_airport" name="airport"
+          style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;">
+          <option value="JFX">John F. Kennedy International Airport</option>
+          <option value="LAX">Los Angeles International Airport</option>
+          <option value="ATL">Atlanta Hartsfield-Jackson International Airport</option>
+        </select>
+      </div>
+      <div
+        style="width: 450px; height: 82px; left: 716px; top: 873px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        <select id="id_booking_time" name="booking_time"
+          style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;">
+          <option value="4h">4 hours</option>
+          <option value="8h">8 hours</option>
+          <option value="16h">16 hours</option>
+        </select>
+      </div>
+      <div
+        style="width: 187px; height: 82px; left: 702px; top: 744px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        <input type="number" id="id_price" name="price" placeholder="Price" required
+          style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;" />
+      </div>
+      <div style="position: relative; left: 120px; top: 1210px">
+        <button type="submit"
+          style="width: 287px; height: 100px; background: black; border-radius: 50px; border: 3px black solid; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word;">
+          Book</button>
+      </div>
+    </form>
     <div
       style="left: 131px; top: 1039px; position: absolute; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
       Total price:</div>
-    <div
-      style="width: 187px; height: 82px; left: 702px; top: 744px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
-      Price</div>
+
     <a href="{url 'Jets'%}">
       <div
         style="width: 172px; height: 82px; left: 901px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
         Jets</div>
     </a>
 
-    <a href="{url 'Booked'%}">
+    <a href="{% url 'booked'%}">
       <div
         style="width: 470px; height: 82px; left: 1073px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
         Booked flights</div>
@@ -105,20 +122,11 @@
     <img
       style="width: 26dd5.48px; height: 309.77px; left: 1670px; top: -90px; position: absolute; transform: rotate(370deg); transform-origin: 0 0"
       src="{% static 'Images/wings2.png' %}" />
-    <a href="{url 'aboutUs'%}">
+    <a href="{% url 'aboutUs'%}">
       <div
         style="width: 254px; height: 82px; left: 597px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
         About us</div>
     </a>
-
-    <div style="width: 287px; height: 100px; left: 131px; top: 1210px; position: absolute">
-      <div
-        style="width: 287px; height: 91.88px; left: 0px; top: 3.63px; position: absolute; background: black; border-radius: 50px; border: 3px black solid">
-      </div>
-      <div
-        style="left: 34.67px; top: 0px; position: absolute; text-align: center; color: #D2983A; font-size: 100px; font-family: Parisienne; font-weight: 400; line-height: 100px; word-wrap: break-word">
-        Book</div>
-    </div>
   </div>
 </body>
 
