@@ -33,9 +33,10 @@
     <div
       style="width: 477px; height: 96px; left: 694px; top: 737px; position: absolute; background: white; border-radius: 50px; border: 3px black solid">
     </div>
-    <div
+    <div id="plane-image-container"
       style="width: 627px; height: 788px; left: 1219px; top: 586px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
     </div>
+
     <div
       style="width: 477px; height: 75px; left: 694px; top: 880px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
     </div>
@@ -75,7 +76,7 @@
         style="width: 400px; height: 82px; left: 131px; top: 873px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
         <select id="id_airport" name="airport"
           style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;">
-          <option value="JFX">John F. Kennedy International Airport</option>
+          <option value="JFK">John F. Kennedy International Airport</option>
           <option value="LAX">Los Angeles International Airport</option>
           <option value="ATL">Atlanta Hartsfield-Jackson International Airport</option>
         </select>
@@ -91,9 +92,7 @@
       </div>
       <div
         style="width: 187px; height: 82px; left: 702px; top: 744px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
-        <input type="number" id="id_price" name="price" placeholder="Price" required
-          style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;" />
-      </div>
+        Price</div>
       <div style="position: relative; left: 120px; top: 1210px">
         <button type="submit"
           style="width: 287px; height: 100px; background: black; border-radius: 50px; border: 3px black solid; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word;">
@@ -101,10 +100,10 @@
       </div>
     </form>
     <div
-      style="left: 131px; top: 1039px; position: absolute; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+      style="left: 131px; top: 1039px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
       Total price:</div>
 
-    <a href="{url 'Jets'%}">
+    <a href="{% url 'jets'%}">
       <div
         style="width: 172px; height: 82px; left: 901px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
         Jets</div>
@@ -128,6 +127,26 @@
         About us</div>
     </a>
   </div>
+  <script>
+    const planeSelect = document.getElementById('id_plane_name');
+    const imageContainer = document.getElementById('plane-image-container');
+
+    const planeImages = {
+      'light1': "{% static 'images/light1.png' %}",
+      'light2': "{% static 'images/light2.png' %}",
+      'airline1': "{% static 'images/airline1.png' %}",
+      'airline2': "{% static 'images/airline2.png' %}",
+      'heavy1': "{% static 'images/heavy1.png' %}",
+      'heavy2': "{% static 'images/heavy2.png' %}"
+    };
+
+    planeSelect.addEventListener('change', function () {
+      const selectedPlane = planeSelect.value;
+      const imageUrl = planeImages[selectedPlane];
+
+      imageContainer.innerHTML = `<img src="${imageUrl}" style="width: 100%; height: 100%; border-radius: 50px;" alt="Plane Image">`;
+    });
+  </script>
 </body>
 
 </html>
