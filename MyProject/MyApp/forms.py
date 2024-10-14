@@ -5,7 +5,7 @@ from .models import Booking_flight
 class Booking_Form(forms.ModelForm):
     class Meta:
         model = Booking_flight
-        fields = ['plane_name', 'email', 'airport', 'booking_time']
+        fields = ['plane_name', 'email', 'airport', 'booking_time', 'price']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
