@@ -56,12 +56,12 @@
     <form method="post" action="{% url 'booking' %}">
       {% csrf_token %}
       <div
-        style="width: 1000px; height: 82px; left: 131px; top: 594px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        style="width: 1000px; height: 82px; left: 131px; top: 594px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 100px; word-wrap: break-word">
         <input type="email" id="id_email" name="email" placeholder="Email"
           style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;" />
       </div>
       <div
-        style="width: 500px; height: 82px; left: 131px; top: 744px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        style="width: 500px; height: 82px; left: 131px; top: 744px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 100px; word-wrap: break-word">
         <select id="id_plane_name" name="plane_name"
           style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;">
           <option value="light1">Cessna C525 Citation</option>
@@ -73,7 +73,7 @@
         </select>
       </div>
       <div
-        style="width: 400px; height: 82px; left: 131px; top: 873px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        style="width: 400px; height: 82px; left: 131px; top: 873px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 100px; word-wrap: break-word">
         <select id="id_airport" name="airport"
           style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;">
           <option value="JFK">John F. Kennedy International Airport</option>
@@ -82,7 +82,7 @@
         </select>
       </div>
       <div
-        style="width: 450px; height: 82px; left: 716px; top: 873px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        style="width: 450px; height: 82px; left: 716px; top: 873px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 100px; word-wrap: break-word">
         <select id="id_booking_time" name="booking_time"
           style="border: none; background: transparent; width: 100%; height: 100%; font-size: inherit; color: inherit; text-align: left; line-height: inherit; font-family: inherit;">
           <option value="4h">4 hours</option>
@@ -90,8 +90,8 @@
           <option value="16h">16 hours</option>
         </select>
       </div>
-      <div
-        style="width: 187px; height: 82px; left: 702px; top: 744px; position: absolute; opacity: 0.50; text-align: center; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+      <div id='price'
+        style="width: 450px; height: 82px; left: 702px; top: 744px; position: absolute; opacity: 0.50; text-align: left; color: black; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 100px; word-wrap: break-word">
         Price</div>
       <div style="position: relative; left: 120px; top: 1210px">
         <button type="submit"
@@ -130,6 +130,16 @@
   <script>
     const planeSelect = document.getElementById('id_plane_name');
     const imageContainer = document.getElementById('plane-image-container');
+    const priceContainer = document.getElementById('price');
+
+    const planePrices = {
+      'light1': 2450,
+      'light2': 3250,
+      'airline1': 31520,
+      'airline2': 21000,
+      'heavy1': 5800,
+      'heavy2': 8530
+    };
 
     const planeImages = {
       'light1': "{% static 'images/light1.png' %}",
@@ -143,8 +153,11 @@
     planeSelect.addEventListener('change', function () {
       const selectedPlane = planeSelect.value;
       const imageUrl = planeImages[selectedPlane];
+      const price = planePrices[selectedPlane];
 
       imageContainer.innerHTML = `<img src="${imageUrl}" style="width: 100%; height: 100%; border-radius: 50px;" alt="Plane Image">`;
+      priceContainer.innerHTML = price;
+
     });
   </script>
 </body>

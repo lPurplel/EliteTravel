@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .models import Booking_flight
 from .forms import Booking_Form
 
 # Create your views here.
@@ -64,10 +65,16 @@ def booking(request):
     if request.method == 'POST':
         form = Booking_Form(request.POST)
         if form.is_valid():
-            form.save()
+            booking = form.save()
+            plane_name = booking.plane_name
+            plane_image = next((choice[2] for choice in Booking_flight.PLANE_CHOICES if choice[0] == plane_name), '')
+            booking.plane_image = plane_image
+            booking.save(update_fields=['plane_image'])
             return redirect('booked')
         else:
             print(form.errors)
     else:
         form = Booking_Form()
+
     return render(request, 'booking.html', {'form': form})
+
