@@ -70,8 +70,8 @@ def booking(request):
             plane_image = next((choice[2] for choice in Booking_flight.PLANE_CHOICES if choice[0] == plane_name), '')
             booking.plane_image = plane_image
             plane_price = next((choice[3] for choice in Booking_flight.PLANE_CHOICES if choice[0] == plane_name), 0)
-            booking.price = plane_price
-            booking.save(update_fields=['plane_image', 'price'])
+            booking.total_price = plane_price * booking.booking_time
+            booking.save(update_fields=['plane_image', 'total_price'])
             return redirect('booked')
         else:
             print(form.errors)

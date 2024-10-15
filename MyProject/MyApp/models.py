@@ -23,8 +23,8 @@ class Booking_flight(models.Model):
         choice[0], choice[1]) for choice in PLANE_CHOICES])
     email = models.EmailField()
     airport = models.CharField(max_length=50, choices=AIRPORT_CHOICES)
-    booking_time = models.CharField(max_length=50)
-    price = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True)  # Новое поле для цены
+    booking_time = models.IntegerField()
+    total_price = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True)
     plane_image = models.CharField(max_length=255, blank=True)
 
 
