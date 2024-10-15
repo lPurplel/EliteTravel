@@ -1,20 +1,23 @@
+{%load static%}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking flights</title>
-  <link rel="stylesheet" href="/Main/style.css">
+  <title>Booked flights</title>
+  <link rel="stylesheet" href="{%static 'css/style.css'%}">
 </head>
 
 <body>
   <div
     style="width: 1920px; height: 1460px; position: relative; background: #3A3A3A; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
-    <img style="width: 1920px; height: 1460px; left: 0px; top: 0px; position: absolute" src="/Images/back.png" />
+    <img style="width: 1920px; height: 1460px; left: 0px; top: 0px; position: absolute"
+      src="{%static 'images/back.png'%}" />
     <div style="width: 1856px; height: 117px; left: 32px; top: 0px; position: absolute"></div>
     <img style="width: 525px; height: 257px; left: 694px; top: 162px; position: absolute"
-      src="/Images/EliteTravel.png" />
+      src="{%static 'images/EliteTravel.png'%}" />
     <div
       style="width: 1854px; height: 1004px; left: 30px; top: 428px; position: absolute; background: rgba(255, 255, 255, 0.20); border-radius: 50px; border: 3px black solid">
     </div>
@@ -34,22 +37,22 @@
       <div
         style="width: 290px; height: 85px; left: 111px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
       </div>
-      <img
+      <img id="image"
         style="width: 176px; height: 158px; left: 12px; top: 198px; position: absolute; border-radius: 50px; border: 3px black solid"
-        src="/Images/acabin1.png" />
-      <div
+        src="{%static 'images/acabin1.png'%}" />
+      <div id="email"
         style="width: 520px; height: 63px; left: 16px; top: 120px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
       </div>
-      <div
+      <div id="plane_name"
         style="width: 239px; height: 62px; left: 256px; top: 215px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
       </div>
-      <div
+      <div id="airport_name"
         style="width: 239px; height: 62px; left: 256px; top: 307px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
       </div>
-      <div
+      <div id="hours"
         style="width: 239px; height: 62px; left: 0px; top: 381px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
       </div>
-      <div
+      <div id="price"
         style="width: 188px; height: 62px; left: 0px; top: 468px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
       </div>
     </div>
@@ -59,7 +62,7 @@
       </div>
       <img
         style="width: 176px; height: 158px; left: 12px; top: 198px; position: absolute; border-radius: 50px; border: 3px black solid"
-        src="/Images/acabin2.png" />
+        src="{%static 'images/acabin2.png'%}" />
       <div
         style="width: 520px; height: 63px; left: 16px; top: 120px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
       </div>
