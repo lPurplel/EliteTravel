@@ -58,9 +58,15 @@ def airline2(request):
 
 
 def booked(request):
-    return render(request, "booked.html")
-
-
+    flights = Booking_flight.objects.all()
+    first_flight = flights[0] if flights else None
+    second_flight = flights[1] if len(flights) > 1 else None
+    third_flight = flights[2] if len(flights) > 2 else None
+    return render(request, 'booked.html', {
+        'first_flight': first_flight,
+        'second_flight': second_flight,
+        'third_flight': third_flight
+    })
 def booking(request):
     if request.method == 'POST':
         form = Booking_Form(request.POST)
