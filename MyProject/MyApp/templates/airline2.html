@@ -24,91 +24,99 @@
     <div
       style="width: 1530px; height: 95px; left: 195px; top: 59px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
     </div>
-    <div
-      style="width: 172px; height: 82px; left: 376px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
-      Home</div>
-    <div style="width: 178px; height: 82px; left: 898px; top: 80px; position: absolute">
+    <a href="{% url 'home'%}">
       <div
-        style="width: 172px; height: 82px; left: 3px; top: 0px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
-        Jets</div>
-      <div
-        style="width: 178.01px; height: 0px; left: 0px; top: 60px; position: absolute; transform: rotate(-0.64deg); transform-origin: 0 0; border: 2px #D2983A solid">
-      </div>
-    </div>
+        style="width: 172px; height: 82px; left: 376px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+        Home</div>
+    </a>
+    <a href="{% url 'jets'%}">
+      <div style="width: 178px; height: 82px; left: 898px; top: 80px; position: absolute">
+        <div
+          style="width: 172px; height: 82px; left: 3px; top: 0px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+          Jets</div>
+        <div
+          style="width: 178.01px; height: 0px; left: 0px; top: 60px; position: absolute; transform: rotate(-0.64deg); transform-origin: 0 0; border: 2px #D2983A solid">
+        </div>
+    </a>
+  </div>
+  <a href="{%url 'aboutUs'%}">
     <div
       style="width: 254px; height: 82px; left: 597px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
       About us</div>
+  </a>
+  <a href="{%url 'booked'%}">
     <div
       style="width: 470px; height: 82px; left: 1073px; top: 80px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
       Booked flights</div>
+  </a>
+  <img
+    style="width: 265.48px; height: 309.77px; left: -5px; top: -45px; position: absolute; transform: rotate(-10deg); transform-origin: 0 0"
+    src="{% static 'Images/wings1.png' %}" />
+
+  <img
+    style="width: 265.48px; height: 309.77px; left: 1670px; top: -90px; position: absolute; transform: rotate(370deg); transform-origin: 0 0"
+    src="{% static 'Images/wings2.png' %}" />
+  <div style="width: 1749px; height: 1074px; left: 62px; top: 333px; position: absolute">
     <img
-      style="width: 265.48px; height: 309.77px; left: -5px; top: -45px; position: absolute; transform: rotate(-10deg); transform-origin: 0 0"
-      src="{% static 'Images/wings1.png' %}" />
-
-    <img
-      style="width: 265.48px; height: 309.77px; left: 1670px; top: -90px; position: absolute; transform: rotate(370deg); transform-origin: 0 0"
-      src="{% static 'Images/wings2.png' %}" />
-    <div style="width: 1749px; height: 1074px; left: 62px; top: 333px; position: absolute">
-      <img
-        style="width: 778px; height: 501px; left: 27px; top: 254px; position: absolute; border-radius: 50px; border: 3px black solid"
-        src="{% static '/images/acabin2.png'%}" />
-      <div
-        style="width: 251px; height: 91px; left: 275px; top: 136px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
-      </div>
-      <div
-        style="width: 778px; height: 302px; left: 27px; top: 772px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
-      </div>
-      <div
-        style="width: 847px; height: 913px; left: 894px; top: 136px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
-      </div>
-      <div
-        style="left: 330px; top: 155px; position: absolute; text-align: center; color: #D2983A; font-size: 65px; font-family: Parisienne; font-weight: 400; line-height: 65px; word-wrap: break-word">
-        Cabin</div>
-      <a href="{% url 'airline'%}">
-        <div style="width: 251px; height: 91px; left: 0px; top: 136px; position: absolute">
-          <div
-            style="width: 251px; height: 91px; left: 0px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
-          </div>
-          <div
-            style="left: 50px; top: 20px; position: absolute; text-align: center; color: #D2983A; font-size: 65px; font-family: Parisienne; font-weight: 400; line-height: 65px; word-wrap: break-word">
-            Back </div>
-      </a>
-
-      <div style="width: 847px; height: 0px; left: 895px; top: 320px; position: absolute; border: 3px black solid">
-      </div>
-      <div
-        style="width: 251px; height: 58px; left: 60px; top: 648px; position: absolute; text-align: center; color: #D2983A; font-size: 55px; font-family: Parisienne; font-weight: 400; line-height: 55px; word-wrap: break-word">
-        Seats: 140</div>
-      <div
-        style="width: 336px; height: 63px; left: 60px; top: 706px; position: absolute; text-align: center; color: #D2983A; font-size: 55px; font-family: Parisienne; font-weight: 400; line-height: 55px; word-wrap: break-word">
-        Speed: 430kts</div>
-      <div
-        style="width: 500px; height: 63px; left: 30px; top: 780px; position: absolute; text-align: center; color: #D2983A; font-size: 55px; font-family: Parisienne; font-weight: 400; line-height: 55px; word-wrap: break-word">
-        Range: 2800 nm</div>
-      <div style="width: 823px; height: 455px; left: 926px; top: 0px; position: absolute; text-align: center"><span
-          style="color: #D2983A; font-size: 60px; font-family: Parisienne; font-weight: 400; line-height: 60px; word-wrap: break-word">Overview
-          Summary<br /></span><span
-          style="color: #D2983A; font-size: 50px; font-family: Parisienne; font-weight: 400; line-height: 50px; word-wrap: break-word">The
-          Airbus A320 is a short- to-medium range commercial passenger airliner, manufactured by Airbus. The A320
-          pioneered the use of digital fly-by-wire flight control systems in a commercial aircraft.</span></div>
-      <div style="width: 823px; height: 433px; left: 906px; top: 350px; position: absolute; text-align: center"><span
-          style="color: #D2983A; font-size: 60px; font-family: Parisienne; font-weight: 400; line-height: 60px; word-wrap: break-word">Comfort
-          & Size<br /></span><span
-          style="color: #D2983A; font-size: 58px; font-family: Parisienne; font-weight: 400; line-height: 58px; word-wrap: break-word">The
-          aircraft seats 140 passengers with a seat pitch that can be adapted. The aircraft includes separate galleys,
-          washrooms and luggage storage. In-flight entertainment can be incorporated in the seats or screens mounted
-          on partitions below the overhead stowages.</span></div>
-      <a href="{% url 'booking'%}">
-        <div style="width: 223px; height: 91px; left: 54px; top: 840px; position: absolute">
-          <div
-            style="width: 223px; height: 91px; left: 0px; top: 0px; position: absolute; background: black; border-radius: 50px; border: 3px black solid">
-          </div>
-          <div
-            style="width: 172px; height: 82px; left: 30px; top: 20px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
-            Book</div>
-      </a>
-
+      style="width: 778px; height: 501px; left: 27px; top: 254px; position: absolute; border-radius: 50px; border: 3px black solid"
+      src="{% static '/images/acabin2.png'%}" />
+    <div
+      style="width: 251px; height: 91px; left: 275px; top: 136px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
     </div>
+    <div
+      style="width: 778px; height: 302px; left: 27px; top: 772px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
+    </div>
+    <div
+      style="width: 847px; height: 913px; left: 894px; top: 136px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
+    </div>
+    <div
+      style="left: 330px; top: 155px; position: absolute; text-align: center; color: #D2983A; font-size: 65px; font-family: Parisienne; font-weight: 400; line-height: 65px; word-wrap: break-word">
+      Cabin</div>
+    <a href="{% url 'airline'%}">
+      <div style="width: 251px; height: 91px; left: 0px; top: 136px; position: absolute">
+        <div
+          style="width: 251px; height: 91px; left: 0px; top: 0px; position: absolute; background: rgba(255, 255, 255, 0.40); border-radius: 50px; border: 3px black solid">
+        </div>
+        <div
+          style="left: 50px; top: 20px; position: absolute; text-align: center; color: #D2983A; font-size: 65px; font-family: Parisienne; font-weight: 400; line-height: 65px; word-wrap: break-word">
+          Back </div>
+    </a>
+
+    <div style="width: 847px; height: 0px; left: 895px; top: 320px; position: absolute; border: 3px black solid">
+    </div>
+    <div
+      style="width: 251px; height: 58px; left: 60px; top: 648px; position: absolute; text-align: center; color: #D2983A; font-size: 55px; font-family: Parisienne; font-weight: 400; line-height: 55px; word-wrap: break-word">
+      Seats: 140</div>
+    <div
+      style="width: 336px; height: 63px; left: 60px; top: 706px; position: absolute; text-align: center; color: #D2983A; font-size: 55px; font-family: Parisienne; font-weight: 400; line-height: 55px; word-wrap: break-word">
+      Speed: 430kts</div>
+    <div
+      style="width: 500px; height: 63px; left: 30px; top: 780px; position: absolute; text-align: center; color: #D2983A; font-size: 55px; font-family: Parisienne; font-weight: 400; line-height: 55px; word-wrap: break-word">
+      Range: 2800 nm</div>
+    <div style="width: 823px; height: 455px; left: 926px; top: 0px; position: absolute; text-align: center"><span
+        style="color: #D2983A; font-size: 60px; font-family: Parisienne; font-weight: 400; line-height: 60px; word-wrap: break-word">Overview
+        Summary<br /></span><span
+        style="color: #D2983A; font-size: 50px; font-family: Parisienne; font-weight: 400; line-height: 50px; word-wrap: break-word">The
+        Airbus A320 is a short- to-medium range commercial passenger airliner, manufactured by Airbus. The A320
+        pioneered the use of digital fly-by-wire flight control systems in a commercial aircraft.</span></div>
+    <div style="width: 823px; height: 433px; left: 906px; top: 350px; position: absolute; text-align: center"><span
+        style="color: #D2983A; font-size: 60px; font-family: Parisienne; font-weight: 400; line-height: 60px; word-wrap: break-word">Comfort
+        & Size<br /></span><span
+        style="color: #D2983A; font-size: 58px; font-family: Parisienne; font-weight: 400; line-height: 58px; word-wrap: break-word">The
+        aircraft seats 140 passengers with a seat pitch that can be adapted. The aircraft includes separate galleys,
+        washrooms and luggage storage. In-flight entertainment can be incorporated in the seats or screens mounted
+        on partitions below the overhead stowages.</span></div>
+    <a href="{% url 'booking'%}">
+      <div style="width: 223px; height: 91px; left: 54px; top: 840px; position: absolute">
+        <div
+          style="width: 223px; height: 91px; left: 0px; top: 0px; position: absolute; background: black; border-radius: 50px; border: 3px black solid">
+        </div>
+        <div
+          style="width: 172px; height: 82px; left: 30px; top: 20px; position: absolute; text-align: center; color: #D2983A; font-size: 70px; font-family: Parisienne; font-weight: 400; line-height: 70px; word-wrap: break-word">
+          Book</div>
+    </a>
+
+  </div>
   </div>
   </div>
   </div>

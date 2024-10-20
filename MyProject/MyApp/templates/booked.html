@@ -1,5 +1,4 @@
 {%load static%}
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -109,8 +108,7 @@
           border: 3px black solid;
         "
       ></div>
-
-      {% if first_flight %}
+      {%if ff%}
       <div
         style="
           width: 536px;
@@ -121,17 +119,31 @@
         "
       >
         <div
+          id="booking_id"
           style="
             width: 290px;
             height: 85px;
             left: 111px;
             top: 0px;
             position: absolute;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 1);
             border-radius: 50px;
             border: 3px black solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Parisienne;
+            font-size: 70px;
+            font-weight: 400;
+            color: black;
+            opacity: 1;
+            word-wrap: break-word;
           "
-        ></div>
+        >
+          {{ ff.id }}
+        </div>
+
         <img
           id="image"
           style="
@@ -143,8 +155,9 @@
             border-radius: 50px;
             border: 3px black solid;
           "
-          src="{%static 'images/airline1.png'%}"
+          src="{% static ff.plane_image %}"
         />
+
         <div
           id="email"
           style="
@@ -153,13 +166,23 @@
             left: 16px;
             top: 120px;
             position: absolute;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 1);
             border-radius: 50px;
             border: 3px black solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Parisienne;
+            font-size: 45px;
+            font-weight: 400;
+            color: black;
+            white-space: nowrap;
           "
         >
-          {{ first_flight.email }}
+          {{ ff.email }}
         </div>
+
         <div
           id="plane_name"
           style="
@@ -168,13 +191,23 @@
             left: 256px;
             top: 215px;
             position: absolute;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 1);
             border-radius: 50px;
             border: 3px black solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Parisienne;
+            font-size: 33px;
+            font-weight: 400;
+            color: black;
+            white-space: nowrap;
           "
         >
-          {{ first_flight.get_plane_name_display }}
+          {{ ff.get_plane_name_display }}
         </div>
+
         <div
           id="airport_name"
           style="
@@ -183,13 +216,24 @@
             left: 256px;
             top: 307px;
             position: absolute;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 1);
             border-radius: 50px;
             border: 3px black solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Parisienne;
+            font-size: 30px;
+            font-weight: 400;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
           "
         >
-          {{ first_flight.get_airport_display }}
+          {{ ff.get_airport_display }}
         </div>
+
         <div
           id="hours"
           style="
@@ -198,13 +242,22 @@
             left: 0px;
             top: 381px;
             position: absolute;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 1);
             border-radius: 50px;
             border: 3px black solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Parisienne;
+            font-size: 50px;
+            font-weight: 400;
+            color: black;
           "
         >
-          {{ first_flight.booking_time }}
+          {{ ff.booking_time }} hours
         </div>
+
         <div
           id="price"
           style="
@@ -213,19 +266,30 @@
             left: 0px;
             top: 468px;
             position: absolute;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 1);
             border-radius: 50px;
             border: 3px black solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Parisienne;
+            font-size: 50px;
+            font-weight: 400;
+            color: black;
+            overflow: hidden;
+            white-space: nowrap;
           "
         >
-          ${{ first_flight.total_price }}
+          ${{ ff.total_price }}
         </div>
+
         {% else %}
-        <p>нет записи</p>
+        <p></p>
         {% endif %}
       </div>
 
-      {% if second_flight %}
+      {% if sf %}
       <div
         style="
           width: 536px;
@@ -236,6 +300,7 @@
         "
       >
         <div
+          id="booking_id2"
           style="
             width: 290px;
             height: 85px;
@@ -246,7 +311,9 @@
             border-radius: 50px;
             border: 3px black solid;
           "
-        ></div>
+        >
+          {{sf.id}}
+        </div>
         <img
           id="image2"
           style="
@@ -258,7 +325,7 @@
             border-radius: 50px;
             border: 3px black solid;
           "
-          src="{%static 'images/airline2.png'%}"
+          src="{% static sf.plane_image %}"
         />
         <div
           id="email2"
@@ -273,7 +340,7 @@
             border: 3px black solid;
           "
         >
-          {{ second_flight.email }}
+          {{ sf.email }}
         </div>
         <div
           id="plane_name2"
@@ -288,7 +355,7 @@
             border: 3px black solid;
           "
         >
-          {{ second_flight.get_plane_name_display }}
+          {{ sf.get_plane_name_display }}
         </div>
         <div
           id="airport_name2"
@@ -303,7 +370,7 @@
             border: 3px black solid;
           "
         >
-          {{ second_flight.get_airport_display }}
+          {{ sf.get_airport_display }}
         </div>
         <div
           id="hours2"
@@ -318,7 +385,7 @@
             border: 3px black solid;
           "
         >
-          {{ second_flight.booking_time }}
+          {{ sf.booking_time }}
         </div>
         <div
           id="price2"
@@ -333,14 +400,14 @@
             border: 3px black solid;
           "
         >
-          {{ second_flight.total_price }}
+          {{ sf.total_price }}
         </div>
         {% else %}
         <p>нет записи</p>
         {% endif %}
       </div>
 
-      {%if third_flight%}
+      {%if tf %}
       <div
         style="
           width: 536px;
@@ -351,6 +418,7 @@
         "
       >
         <div
+          id="booking_id3"
           style="
             width: 290px;
             height: 85px;
@@ -361,7 +429,9 @@
             border-radius: 50px;
             border: 3px black solid;
           "
-        ></div>
+        >
+          {{tf.id}}
+        </div>
         <img
           id="image3"
           style="
@@ -373,7 +443,7 @@
             border-radius: 50px;
             border: 3px black solid;
           "
-          src="{%static 'images/heavy1.png'%}"
+          src="{%static tf.plane_image%}"
         />
         <div
           id="email3"
@@ -388,7 +458,7 @@
             border: 3px black solid;
           "
         >
-          {{third_flight.email}}
+          {{tf.email}}
         </div>
         <div
           id="plane_name3"
@@ -403,7 +473,7 @@
             border: 3px black solid;
           "
         >
-          {{third_flight.get_plane_name_display}}
+          {{tf.get_plane_name_display}}
         </div>
         <div
           id="airport_name3"
@@ -418,7 +488,7 @@
             border: 3px black solid;
           "
         >
-          {{third_flight.get_airport_display}}
+          {{tf.get_airport_display}}
         </div>
         <div
           id="hours3"
@@ -433,7 +503,7 @@
             border: 3px black solid;
           "
         >
-          {{third_flight.booking_time}}
+          {{tf.booking_time}}
         </div>
         <div
           id="price3"
@@ -448,7 +518,7 @@
             border: 3px black solid;
           "
         >
-          {{third_flight.total_price}}
+          {{tf.total_price}}
         </div>
         {% else %}
         <p>нет записи</p>

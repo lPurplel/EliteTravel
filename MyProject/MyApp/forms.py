@@ -13,4 +13,3 @@ class Booking_Form(forms.ModelForm):
         self.fields['plane_name'].widget.attrs.update({'id': 'id_plane_name'})
         self.fields['airport'].widget.attrs.update({'id': 'id_airport'})
         self.fields['booking_time'].widget.attrs.update({'id': 'id_booking_time', 'min': 1, 'max': 720})
-
