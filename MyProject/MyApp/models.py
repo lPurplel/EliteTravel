@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 
@@ -19,13 +18,14 @@ class Booking_flight(models.Model):
         ('ATL', 'Atlanta Hartsfield-Jackson International Airport')
     ]
 
-    plane_name = models.CharField(max_length=50, choices=[(choice[0], choice[1]) for choice in PLANE_CHOICES])
+    plane_name = models.CharField(max_length=50, choices=[(
+        choice[0], choice[1]) for choice in PLANE_CHOICES])
     email = models.EmailField()
     airport = models.CharField(max_length=50, choices=AIRPORT_CHOICES)
     booking_time = models.IntegerField()
-    total_price = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True)
+    total_price = models.DecimalField(
+        max_digits=10, decimal_places=0, blank=True, null=True)
     plane_image = models.CharField(max_length=255, blank=True)
-
 
     def __str__(self):
         return f"{self.plane_name} at {self.airport}"

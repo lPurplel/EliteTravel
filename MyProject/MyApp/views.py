@@ -1,11 +1,39 @@
+from django.contrib.auth.models import User
+from .forms import RegistrationForm
+from django.contrib.auth import login
 from django.shortcuts import render, redirect
 from .models import Booking_flight
 from .forms import Booking_Form
+import pdb
 # Create your views here.
 
 
 def home(request):
     return render(request, "index.html")
+
+
+def signUp(request):
+    print("Request Method:", request.method)
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        # pdb.set_trace()
+        if form.is_valid():
+            user = User.objects.create_user(
+                username=form.cleaned_data['email'],
+                email=form.cleaned_data['email'],
+                password=form.cleaned_data['password']
+            )
+            login(request, user)
+            return redirect('home')
+    else:
+        form = RegistrationForm()
+
+    print(form.errors)
+    return render(request, 'signUp.html', {'form': form})
+
+
+def signIn(request):
+    return render(request, "signIn.html")
 
 
 def jets(request):
@@ -47,6 +75,7 @@ def heavy2(request):
 def airline(request):
     return render(request, "airline.html")
 
+
 def airline1(request):
     return render(request, "airline1.html")
 
@@ -58,12 +87,13 @@ def airline2(request):
 def booked(request):
     flights = Booking_flight.objects.all()
 
-    booking = Booking_flight.objects.filter(pk=request.session.get('last_booking_id')).first()
+    booking = Booking_flight.objects.filter(
+        pk=request.session.get('last_booking_id')).first()
 
     first_flight = None
     second_flight = None
     third_flight = None
-    
+
     if flights.exists():
         first_flight = flights[0] if flights.count() > 0 else None
         second_flight = flights[1] if flights.count() > 1 else None
@@ -78,20 +108,21 @@ def booked(request):
     })
 
 
-
 def booking(request):
     if request.method == 'POST':
         form = Booking_Form(request.POST)
         if form.is_valid():
             booking = form.save(commit=False)
-            
+
             plane_name = booking.plane_name
-            
-            plane_image = next((choice[2] for choice in Booking_flight.PLANE_CHOICES if choice[0] == plane_name), '')
+
+            plane_image = next(
+                (choice[2] for choice in Booking_flight.PLANE_CHOICES if choice[0] == plane_name), '')
             booking.plane_image = plane_image
-            plane_price = next((choice[3] for choice in Booking_flight.PLANE_CHOICES if choice[0] == plane_name), 0)
+            plane_price = next(
+                (choice[3] for choice in Booking_flight.PLANE_CHOICES if choice[0] == plane_name), 0)
             booking.total_price = plane_price * booking.booking_time
-            
+
             booking.save()
             request.session['last_booking_id'] = booking.id
             return redirect('booked')
@@ -100,4 +131,3 @@ def booking(request):
     else:
         form = Booking_Form()
     return render(request, 'booking.html', {'form': form})
-
