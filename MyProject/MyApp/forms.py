@@ -1,7 +1,10 @@
+from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django import forms
 from .models import Booking_flight
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from django.contrib.auth.forms import AuthenticationForm
 
 
 class RegistrationForm(forms.Form):
@@ -23,6 +26,11 @@ class RegistrationForm(forms.Form):
 
         if password and password_confirm and password != password_confirm:
             raise ValidationError("Password do not match")
+
+
+class LoginForm(forms.Form):
+    email = forms.EmailField(label='Email')
+    password = forms.CharField(widget=forms.PasswordInput, label='Password')
 
 
 class Booking_Form(forms.ModelForm):

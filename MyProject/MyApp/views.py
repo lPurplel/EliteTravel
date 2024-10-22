@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
-from .forms import RegistrationForm
+from .forms import RegistrationForm, LoginForm
+from django.contrib.auth import authenticate
 from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import Booking_flight
 from .forms import Booking_Form
@@ -13,10 +15,8 @@ def home(request):
 
 
 def signUp(request):
-    print("Request Method:", request.method)
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
-        # pdb.set_trace()
         if form.is_valid():
             user = User.objects.create_user(
                 username=form.cleaned_data['email'],
@@ -33,7 +33,31 @@ def signUp(request):
 
 
 def signIn(request):
-    return render(request, "signIn.html")
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+
+            try:
+                user = User.objects.get(email=email)
+            except User.DoesNotExist:
+                user = None
+
+            if user:
+                user = authenticate(username=user.username, password=password)
+                if user is not None:
+                    login(request, user)
+                    return redirect('home')
+                else:
+                    form.add_error('password', 'Incorrect password.')
+            else:
+                form.add_error(
+                    'email', 'User not found')
+    else:
+        form = LoginForm()
+
+    return render(request, 'signIn.html', {'form': form})
 
 
 def jets(request):
@@ -84,6 +108,7 @@ def airline2(request):
     return render(request, "airline2.html")
 
 
+@login_required()
 def booked(request):
     flights = Booking_flight.objects.all()
 
@@ -108,6 +133,7 @@ def booked(request):
     })
 
 
+@login_required()
 def booking(request):
     if request.method == 'POST':
         form = Booking_Form(request.POST)
