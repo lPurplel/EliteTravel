@@ -20,7 +20,7 @@ class Booking_flight(models.Model):
 
     plane_name = models.CharField(max_length=50, choices=[(
         choice[0], choice[1]) for choice in PLANE_CHOICES])
-    email = models.EmailField()
+    phone = models.CharField(max_length=15, default="None")
     airport = models.CharField(max_length=50, choices=AIRPORT_CHOICES)
     booking_time = models.IntegerField()
     total_price = models.DecimalField(

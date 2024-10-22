@@ -36,12 +36,12 @@ class LoginForm(forms.Form):
 class Booking_Form(forms.ModelForm):
     class Meta:
         model = Booking_flight
-        fields = ['plane_name', 'email', 'airport',
+        fields = ['plane_name', 'phone', 'airport',
                   'booking_time', 'total_price']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['email'].widget.attrs.update({'id': 'id_email'})
+        self.fields['phone'].widget.attrs.update({'id': 'id_phone'})
         self.fields['plane_name'].widget.attrs.update({'id': 'id_plane_name'})
         self.fields['airport'].widget.attrs.update({'id': 'id_airport'})
         self.fields['booking_time'].widget.attrs.update(

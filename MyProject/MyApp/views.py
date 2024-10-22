@@ -11,7 +11,14 @@ import pdb
 
 
 def home(request):
-    return render(request, "index.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'index.html', context)
 
 
 def signUp(request):
@@ -61,51 +68,124 @@ def signIn(request):
 
 
 def jets(request):
-    return render(request, "jets.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'jets.html', context)
 
 
 def aboutUs(request):
-    return render(request, "aboutUs.html")
-
-
-def booked(request):
-    return render(request, "booked.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'aboutUs.html', context)
 
 
 def light(request):
-    return render(request, "light.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'light.html', context)
 
 
 def light1(request):
-    return render(request, "light1.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'light1.html', context)
 
 
 def light2(request):
-    return render(request, "light2.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'light2.html', context)
 
 
 def heavy(request):
-    return render(request, "heavy.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'heavy.html', context)
 
 
 def heavy1(request):
-    return render(request, "heavy1.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'heavy1.html', context)
 
 
 def heavy2(request):
-    return render(request, "heavy2.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'heavy2.html', context)
 
 
 def airline(request):
-    return render(request, "airline.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'airline.html', context)
 
 
 def airline1(request):
-    return render(request, "airline1.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'airline1.html', context)
 
 
 def airline2(request):
-    return render(request, "airline2.html")
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+    }
+    return render(request, 'airline2.html', context)
 
 
 @login_required()
@@ -124,13 +204,19 @@ def booked(request):
         second_flight = flights[1] if flights.count() > 1 else None
         third_flight = flights[2] if flights.count() > 2 else None
 
-    return render(request, 'booked.html', {
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
         'ff': first_flight,
         'sf': second_flight,
         'tf': third_flight,
         'booking_id': booking.id if booking else None,
         'BF': flights
-    })
+    }
+    return render(request, 'booked.html', context)
 
 
 @login_required()
@@ -156,4 +242,13 @@ def booking(request):
             print(form.errors)
     else:
         form = Booking_Form()
-    return render(request, 'booking.html', {'form': form})
+
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+        'form': form
+    }
+    return render(request, 'jets.html', context)
