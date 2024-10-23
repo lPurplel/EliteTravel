@@ -251,4 +251,4 @@ def booking(request):
         'first_letter': first_letter,
         'form': form
     }
-    return render(request, 'jets.html', context)
+    return render(request, 'booking.html', context)
