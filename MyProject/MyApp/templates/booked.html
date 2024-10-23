@@ -1,54 +1,44 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booked flights</title>
-    <link rel="stylesheet" href="{%static 'css/style.css'%}" />
-  </head>
 
-  <body>
-    <div
-      style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booked flights</title>
+  <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+</head>
+
+<body>
+  <div style="
         width: 1920px;
         height: 1460px;
         position: relative;
         background: #3a3a3a;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      "
-    >
-      <img
-        style="
+      ">
+    <img style="
           width: 1920px;
           height: 1460px;
           left: 0px;
           top: 0px;
           position: absolute;
-        "
-        src="{%static 'images/back.png'%}"
-      />
-      <div
-        style="
+        " src="{%static 'images/back.png'%}" />
+    <div style="
           width: 1856px;
           height: 117px;
           left: 32px;
           top: 0px;
           position: absolute;
-        "
-      ></div>
-      <img
-        style="
+        "></div>
+    <img style="
           width: 525px;
           height: 257px;
           left: 694px;
           top: 162px;
           position: absolute;
-        "
-        src="{%static 'images/EliteTravel.png'%}"
-      />
-      <div
-        style="
+        " src="{%static 'images/EliteTravel.png'%}" />
+    <div style="
           width: 1854px;
           height: 1004px;
           left: 30px;
@@ -57,10 +47,8 @@
           background: rgba(255, 255, 255, 0.2);
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      <div
-        style="
+        "></div>
+    <div style="
           width: 1530px;
           height: 95px;
           left: 195px;
@@ -69,10 +57,8 @@
           background: rgba(255, 255, 255, 0.4);
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      <div
-        style="
+        "></div>
+    <div style="
           width: 568px;
           height: 455px;
           left: 48px;
@@ -81,10 +67,8 @@
           background: rgba(255, 255, 255, 0.4);
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      <div
-        style="
+        "></div>
+    <div style="
           width: 568px;
           height: 455px;
           left: 676px;
@@ -93,11 +77,8 @@
           background: rgba(255, 255, 255, 0.4);
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      <div
-        id="order_container"
-        style="
+        "></div>
+    <div id="order_container" style="
           width: 568px;
           height: 455px;
           left: 1298px;
@@ -106,21 +87,16 @@
           background: rgba(255, 255, 255, 0.4);
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      {%if ff%}
-      <div
-        style="
+        "></div>
+    {%if ff%}
+    <div style="
           width: 536px;
           height: 530px;
           left: 61px;
           top: 578px;
           position: absolute;
-        "
-      >
-        <div
-          id="booking_id"
-          style="
+        ">
+      <div id="booking_id" style="
             width: 290px;
             height: 85px;
             left: 111px;
@@ -139,14 +115,11 @@
             color: black;
             opacity: 1;
             word-wrap: break-word;
-          "
-        >
-          {{ ff.id }}
-        </div>
+          ">
+        {{ ff.id }}
+      </div>
 
-        <img
-          id="image"
-          style="
+      <img id="image" style="
             width: 176px;
             height: 158px;
             left: 12px;
@@ -154,13 +127,9 @@
             position: absolute;
             border-radius: 50px;
             border: 3px black solid;
-          "
-          src="{% static ff.plane_image %}"
-        />
+          " src="{% static ff.plane_image %}" />
 
-        <div
-          id="phone"
-          style="
+      <div id="phone" style="
             width: 400px;
             height: 63px;
             left: 16px;
@@ -178,14 +147,11 @@
             font-weight: 400;
             color: black;
             white-space: nowrap;
-          "
-        >
-          {{ ff.phone }}
-        </div>
+          ">
+        {{ ff.phone }}
+      </div>
 
-        <div
-          id="plane_name"
-          style="
+      <div id="plane_name" style="
             width: 239px;
             height: 62px;
             left: 256px;
@@ -204,14 +170,11 @@
             color: black;
             overflow: hidden;
             white-space: nowrap;
-          "
-        >
-          {{ ff.get_plane_name_display }}
-        </div>
+          ">
+        {{ ff.get_plane_name_display }}
+      </div>
 
-        <div
-          id="airport_name"
-          style="
+      <div id="airport_name" style="
             width: 239px;
             height: 62px;
             left: 256px;
@@ -230,14 +193,11 @@
             color: black;
             overflow: hidden;
             white-space: nowrap;
-          "
-        >
-          {{ ff.get_airport_display }}
-        </div>
+          ">
+        {{ ff.get_airport_display }}
+      </div>
 
-        <div
-          id="hours"
-          style="
+      <div id="hours" style="
             width: 239px;
             height: 62px;
             left: 0px;
@@ -254,14 +214,11 @@
             font-size: 50px;
             font-weight: 400;
             color: black;
-          "
-        >
-          {{ ff.booking_time }} hours
-        </div>
+          ">
+        {{ ff.booking_time }} hours
+      </div>
 
-        <div
-          id="price"
-          style="
+      <div id="price" style="
             width: 188px;
             height: 62px;
             left: 0px;
@@ -280,29 +237,24 @@
             color: black;
             overflow: hidden;
             white-space: nowrap;
-          "
-        >
-          ${{ ff.total_price }}
-        </div>
-
-        {% else %}
-        <p></p>
-        {% endif %}
+          ">
+        ${{ ff.total_price }}
       </div>
 
-      {% if sf %}
-      <div
-        style="
+      {% else %}
+      <p></p>
+      {% endif %}
+    </div>
+
+    {% if sf %}
+    <div style="
           width: 536px;
           height: 530px;
           left: 689px;
           top: 578px;
           position: absolute;
-        "
-      >
-        <div
-          id="booking_id2"
-          style="
+        ">
+      <div id="booking_id2" style="
             width: 290px;
             height: 85px;
             left: 111px;
@@ -321,13 +273,10 @@
             color: black;
             opacity: 1;
             word-wrap: break-word;
-          "
-        >
-          {{sf.id}}
-        </div>
-        <img
-          id="image2"
-          style="
+          ">
+        {{sf.id}}
+      </div>
+      <img id="image2" style="
             width: 176px;
             height: 158px;
             left: 12px;
@@ -335,12 +284,8 @@
             position: absolute;
             border-radius: 50px;
             border: 3px black solid;
-          "
-          src="{% static sf.plane_image %}"
-        />
-        <div
-          id="phone2"
-          style="
+          " src="{% static sf.plane_image %}" />
+      <div id="phone2" style="
             width: 520px;
             height: 63px;
             left: 16px;
@@ -358,13 +303,10 @@
             font-weight: 400;
             color: black;
             white-space: nowrap;
-          "
-        >
-          {{ sf.phone }}
-        </div>
-        <div
-          id="plane_name2"
-          style="
+          ">
+        {{ sf.phone }}
+      </div>
+      <div id="plane_name2" style="
             width: 239px;
             height: 62px;
             left: 256px;
@@ -383,13 +325,10 @@
             color: black;
             overflow: hidden;
             white-space: nowrap;
-          "
-        >
-          {{ sf.get_plane_name_display }}
-        </div>
-        <div
-          id="airport_name2"
-          style="
+          ">
+        {{ sf.get_plane_name_display }}
+      </div>
+      <div id="airport_name2" style="
             width: 239px;
             height: 62px;
             left: 256px;
@@ -408,13 +347,10 @@
             color: black;
             overflow: hidden;
             white-space: nowrap;
-          "
-        >
-          {{ sf.get_airport_display }}
-        </div>
-        <div
-          id="hours2"
-          style="
+          ">
+        {{ sf.get_airport_display }}
+      </div>
+      <div id="hours2" style="
             width: 239px;
             height: 62px;
             left: 0px;
@@ -431,13 +367,10 @@
             font-size: 50px;
             font-weight: 400;
             color: black;
-          "
-        >
-          {{ sf.booking_time }} hours
-        </div>
-        <div
-          id="price2"
-          style="
+          ">
+        {{ sf.booking_time }} hours
+      </div>
+      <div id="price2" style="
             width: 188px;
             height: 62px;
             left: 0px;
@@ -456,28 +389,23 @@
             color: black;
             overflow: hidden;
             white-space: nowrap;
-          "
-        >
-          ${{ sf.total_price }}
-        </div>
-        {% else %}
-        <p></p>
-        {% endif %}
+          ">
+        ${{ sf.total_price }}
       </div>
+      {% else %}
+      <p></p>
+      {% endif %}
+    </div>
 
-      {%if tf %}
-      <div
-        style="
+    {%if tf %}
+    <div style="
           width: 536px;
           height: 530px;
           left: 1317px;
           top: 578px;
           position: absolute;
-        "
-      >
-        <div
-          id="booking_id3"
-          style="
+        ">
+      <div id="booking_id3" style="
             width: 290px;
             height: 85px;
             left: 111px;
@@ -496,13 +424,10 @@
             color: black;
             opacity: 1;
             word-wrap: break-word;
-          "
-        >
-          {{tf.id}}
-        </div>
-        <img
-          id="image3"
-          style="
+          ">
+        {{tf.id}}
+      </div>
+      <img id="image3" style="
             width: 176px;
             height: 158px;
             left: 12px;
@@ -510,12 +435,8 @@
             position: absolute;
             border-radius: 50px;
             border: 3px black solid;
-          "
-          src="{%static tf.plane_image%}"
-        />
-        <div
-          id="phone3"
-          style="
+          " src="{%static tf.plane_image%}" />
+      <div id="phone3" style="
             width: 520px;
             height: 63px;
             left: 16px;
@@ -533,13 +454,10 @@
             font-weight: 400;
             color: black;
             white-space: nowrap;
-          "
-        >
-          {{tf.phone}}
-        </div>
-        <div
-          id="plane_name3"
-          style="
+          ">
+        {{tf.phone}}
+      </div>
+      <div id="plane_name3" style="
             width: 239px;
             height: 62px;
             left: 256px;
@@ -558,13 +476,10 @@
             color: black;
             overflow: hidden;
             white-space: nowrap;
-          "
-        >
-          {{tf.get_plane_name_display}}
-        </div>
-        <div
-          id="airport_name3"
-          style="
+          ">
+        {{tf.get_plane_name_display}}
+      </div>
+      <div id="airport_name3" style="
             width: 239px;
             height: 62px;
             left: 256px;
@@ -583,13 +498,10 @@
             color: black;
             overflow: hidden;
             white-space: nowrap;
-          "
-        >
-          {{tf.get_airport_display}}
-        </div>
-        <div
-          id="hours3"
-          style="
+          ">
+        {{tf.get_airport_display}}
+      </div>
+      <div id="hours3" style="
             width: 239px;
             height: 62px;
             left: 0px;
@@ -606,13 +518,10 @@
             font-size: 50px;
             font-weight: 400;
             color: black;
-          "
-        >
-          {{tf.booking_time}} hours
-        </div>
-        <div
-          id="price3"
-          style="
+          ">
+        {{tf.booking_time}} hours
+      </div>
+      <div id="price3" style="
             width: 188px;
             height: 62px;
             left: 0px;
@@ -631,17 +540,15 @@
             color: black;
             overflow: hidden;
             white-space: nowrap;
-          "
-        >
-          ${{ sf.total_price }}
-        </div>
-        {% else %}
-        <p></p>
-        {% endif %}
+          ">
+        ${{ sf.total_price }}
       </div>
-      <a href="{%url 'home'%}">
-        <div
-          style="
+      {% else %}
+      <p></p>
+      {% endif %}
+    </div>
+    <a href="{%url 'home'%}">
+      <div style="
             width: 172px;
             height: 82px;
             left: 376px;
@@ -654,15 +561,13 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          Home
-        </div>
-      </a>
+          ">
+        Home
+      </div>
+    </a>
 
-      <a href="{%url 'jets'%}">
-        <div
-          style="
+    <a href="{%url 'jets'%}">
+      <div style="
             width: 172px;
             height: 82px;
             left: 901px;
@@ -675,15 +580,13 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          Jets
-        </div>
-      </a>
+          ">
+        Jets
+      </div>
+    </a>
 
-      <a href="{%url 'aboutUs'%}">
-        <div
-          style="
+    <a href="{%url 'aboutUs'%}">
+      <div style="
             width: 254px;
             height: 82px;
             left: 597px;
@@ -696,14 +599,12 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          About us
-        </div>
-      </a>
+          ">
+        About us
+      </div>
+    </a>
 
-      <div
-        style="
+    <div style="
           left: 616px;
           top: 464px;
           position: absolute;
@@ -714,12 +615,10 @@
           font-weight: 400;
           line-height: 100px;
           word-wrap: break-word;
-        "
-      >
-        Your booked flight
-      </div>
-      <img
-        style="
+        ">
+      Your booked flight
+    </div>
+    <img style="
           width: 265.48px;
           height: 309.77px;
           left: -5px;
@@ -727,12 +626,9 @@
           position: absolute;
           transform: rotate(-10deg);
           transform-origin: 0 0;
-        "
-        src="{% static 'Images/wings1.png' %}"
-      />
+        " src="{% static 'Images/wings1.png' %}" />
 
-      <img
-        style="
+    <img style="
           width: 265.48px;
           height: 309.77px;
           left: 1670px;
@@ -740,20 +636,15 @@
           position: absolute;
           transform: rotate(370deg);
           transform-origin: 0 0;
-        "
-        src="{% static 'Images/wings2.png' %}"
-      />
-      <div
-        style="
+        " src="{% static 'Images/wings2.png' %}" />
+    <div style="
           width: 470px;
           height: 82px;
           left: 1073px;
           top: 80px;
           position: absolute;
-        "
-      >
-        <div
-          style="
+        ">
+      <div style="
             width: 470px;
             height: 82px;
             left: 0px;
@@ -766,43 +657,41 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          Booked flights
-        </div>
-        <div
-          style="
+          ">
+        Booked flights
+      </div>
+      <div style="
             width: 397px;
             height: 0px;
             left: 36px;
             top: 65px;
             position: absolute;
             border: 2px #d6973a solid;
-          "
-        ></div>
-      </div>
+          "></div>
     </div>
-    <div
-      style="
-        width: 81px;
-        height: 74px;
-        left: 1567px;
-        top: 70px;
-        position: absolute;
-        background: rgba(255, 255, 255, 0.2);
-        color: #d2983a;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 9999px;
-        border: 3px #d2983a solid;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 50px;
-        font-weight: bold;
-        font-family: Parisienne;
-      "
-    >
+  </div>
+  <a href="{%url 'account'%}">
+    <div style="
+                  width: 81px;
+                  height: 74px;
+                  left: 1567px;
+                  top: 70px;
+                  position: absolute;
+                  background: rgba(255, 255, 255, 0.2);
+                  color: #d2983a;
+                  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                  border-radius: 9999px;
+                  border: 3px #d2983a solid;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 50px;
+                  font-weight: bold;
+                  font-family: Parisienne;
+                ">
       {{ first_letter }}
     </div>
-  </body>
+  </a>
+</body>
+
 </html>

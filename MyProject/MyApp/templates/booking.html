@@ -2,54 +2,44 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booking</title>
-    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
-  </head>
 
-  <body>
-    <div
-      style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking</title>
+  <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+</head>
+
+<body>
+  <div style="
         width: 1920px;
         height: 1460px;
         position: relative;
         background: #3a3a3a;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      "
-    >
-      <img
-        style="
+      ">
+    <img style="
           width: 1920px;
           height: 1460px;
           left: 0px;
           top: 0px;
           position: absolute;
-        "
-        src="{% static 'images/back.png'%}"
-      />
-      <div
-        style="
+        " src="{% static 'images/back.png'%}" />
+    <div style="
           width: 1856px;
           height: 117px;
           left: 32px;
           top: 0px;
           position: absolute;
-        "
-      ></div>
-      <img
-        style="
+        "></div>
+    <img style="
           width: 525px;
           height: 257px;
           left: 694px;
           top: 162px;
           position: absolute;
-        "
-        src="{% static 'images/EliteTravel.png'%}"
-      />
-      <div
-        style="
+        " src="{% static 'images/EliteTravel.png'%}" />
+    <div style="
           width: 1854px;
           height: 1004px;
           left: 29px;
@@ -58,10 +48,8 @@
           background: rgba(255, 255, 255, 0.2);
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      <div
-        style="
+        "></div>
+    <div style="
           width: 1530px;
           height: 95px;
           left: 195px;
@@ -70,10 +58,8 @@
           background: rgba(255, 255, 255, 0.4);
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      <div
-        style="
+        "></div>
+    <div style="
           width: 1055px;
           height: 97px;
           left: 116px;
@@ -82,10 +68,8 @@
           background: white;
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      <div
-        style="
+        "></div>
+    <div style="
           width: 543px;
           height: 96px;
           left: 116px;
@@ -94,10 +78,8 @@
           background: white;
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      <div
-        style="
+        "></div>
+    <div style="
           width: 477px;
           height: 96px;
           left: 694px;
@@ -106,11 +88,8 @@
           background: white;
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      <div
-        id="plane-image-container"
-        style="
+        "></div>
+    <div id="plane-image-container" style="
           width: 627px;
           height: 788px;
           left: 1219px;
@@ -119,11 +98,9 @@
           background: rgba(255, 255, 255, 0.4);
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
+        "></div>
 
-      <div
-        style="
+    <div style="
           width: 477px;
           height: 75px;
           left: 694px;
@@ -132,10 +109,8 @@
           background: rgba(255, 255, 255, 0.4);
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      <div
-        style="
+        "></div>
+    <div style="
           width: 438px;
           height: 80px;
           left: 116px;
@@ -144,11 +119,9 @@
           background: white;
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
-      <a href="{% url 'home'%}">
-        <div
-          style="
+        "></div>
+    <a href="{% url 'home'%}">
+      <div style="
             width: 172px;
             height: 82px;
             left: 376px;
@@ -161,14 +134,12 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          Home
-        </div>
-      </a>
+          ">
+        Home
+      </div>
+    </a>
 
-      <div
-        style="
+    <div style="
           left: 822px;
           top: 459px;
           position: absolute;
@@ -179,15 +150,13 @@
           font-weight: 400;
           line-height: 100px;
           word-wrap: break-word;
-        "
-      >
-        Booking
-      </div>
+        ">
+      Booking
+    </div>
 
-      <form method="post" action="{% url 'booking' %}">
-        {% csrf_token %}
-        <div
-          style="
+    <form method="post" action="{% url 'booking' %}">
+      {% csrf_token %}
+      <div style="
             width: 1000px;
             height: 82px;
             left: 131px;
@@ -201,14 +170,8 @@
             font-weight: 400;
             line-height: 100px;
             word-wrap: break-word;
-          "
-        >
-          <input
-            type="number"
-            id="id_phone"
-            name="phone"
-            placeholder="Phone"
-            style="
+          ">
+        <input type="number" id="id_phone" name="phone" placeholder="Phone" style="
               border: none;
               background: transparent;
               width: 100%;
@@ -218,11 +181,9 @@
               text-align: left;
               line-height: inherit;
               font-family: inherit;
-            "
-          />
-        </div>
-        <div
-          style="
+            " />
+      </div>
+      <div style="
             width: 500px;
             height: 82px;
             left: 131px;
@@ -236,12 +197,8 @@
             font-weight: 400;
             line-height: 100px;
             word-wrap: break-word;
-          "
-        >
-          <select
-            id="id_plane_name"
-            name="plane_name"
-            style="
+          ">
+        <select id="id_plane_name" name="plane_name" style="
               border: none;
               background: transparent;
               width: 100%;
@@ -251,18 +208,16 @@
               text-align: left;
               line-height: inherit;
               font-family: inherit;
-            "
-          >
-            <option value="light1">Cessna C525 Citation</option>
-            <option value="light2">Embraer Phenom 300E</option>
-            <option value="airline1">A380</option>
-            <option value="airline2">A320</option>
-            <option value="heavy1">Gulfstream G300</option>
-            <option value="heavy2">Bombardier Global 7500</option>
-          </select>
-        </div>
-        <div
-          style="
+            ">
+          <option value="light1">Cessna C525 Citation</option>
+          <option value="light2">Embraer Phenom 300E</option>
+          <option value="airline1">A380</option>
+          <option value="airline2">A320</option>
+          <option value="heavy1">Gulfstream G300</option>
+          <option value="heavy2">Bombardier Global 7500</option>
+        </select>
+      </div>
+      <div style="
             width: 400px;
             height: 82px;
             left: 131px;
@@ -276,12 +231,8 @@
             font-weight: 400;
             line-height: 100px;
             word-wrap: break-word;
-          "
-        >
-          <select
-            id="id_airport"
-            name="airport"
-            style="
+          ">
+        <select id="id_airport" name="airport" style="
               border: none;
               background: transparent;
               width: 100%;
@@ -291,17 +242,15 @@
               text-align: left;
               line-height: inherit;
               font-family: inherit;
-            "
-          >
-            <option value="JFK">John F. Kennedy International Airport</option>
-            <option value="LAX">Los Angeles International Airport</option>
-            <option value="ATL">
-              Atlanta Hartsfield-Jackson International Airport
-            </option>
-          </select>
-        </div>
-        <div
-          style="
+            ">
+          <option value="JFK">John F. Kennedy International Airport</option>
+          <option value="LAX">Los Angeles International Airport</option>
+          <option value="ATL">
+            Atlanta Hartsfield-Jackson International Airport
+          </option>
+        </select>
+      </div>
+      <div style="
             width: 180px;
             height: 82px;
             left: 716px;
@@ -318,16 +267,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-          "
-        >
-          <input
-            type="number"
-            id="id_booking_time"
-            name="booking_time"
-            placeholder="hours"
-            min="1"
-            max="730"
-            style="
+          ">
+        <input type="number" id="id_booking_time" name="booking_time" placeholder="hours" min="1" max="730" style="
               border: none;
               background: transparent;
               width: 85%;
@@ -337,18 +278,11 @@
               text-align: left;
               line-height: inherit;
               font-family: inherit;
-            "
-          />
-          <span
-            class="unit"
-            style="font-size: inherit; line-height: inherit; color: inherit"
-            >h</span
-          >
-        </div>
+            " />
+        <span class="unit" style="font-size: inherit; line-height: inherit; color: inherit">h</span>
+      </div>
 
-        <div
-          id="price"
-          style="
+      <div id="price" style="
             width: 450px;
             height: 82px;
             left: 702px;
@@ -362,14 +296,11 @@
             font-weight: 400;
             line-height: 100px;
             word-wrap: break-word;
-          "
-        >
-          Price
-        </div>
-        <div style="position: relative; left: 120px; top: 1210px">
-          <button
-            type="submit"
-            style="
+          ">
+        Price
+      </div>
+      <div style="position: relative; left: 120px; top: 1210px">
+        <button type="submit" style="
               width: 287px;
               height: 100px;
               background: black;
@@ -381,15 +312,12 @@
               font-weight: 400;
               line-height: 70px;
               word-wrap: break-word;
-            "
-          >
-            Book
-          </button>
-        </div>
-      </form>
-      <div
-        id="total_price"
-        style="
+            ">
+          Book
+        </button>
+      </div>
+    </form>
+    <div id="total_price" style="
           left: 131px;
           top: 1039px;
           position: absolute;
@@ -400,14 +328,12 @@
           font-weight: 400;
           line-height: 70px;
           word-wrap: break-word;
-        "
-      >
-        Total price:
-      </div>
+        ">
+      Total price:
+    </div>
 
-      <a href="{% url 'jets'%}">
-        <div
-          style="
+    <a href="{% url 'jets'%}">
+      <div style="
             width: 172px;
             height: 82px;
             left: 901px;
@@ -420,15 +346,13 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          Jets
-        </div>
-      </a>
+          ">
+        Jets
+      </div>
+    </a>
 
-      <a href="{% url 'booked'%}">
-        <div
-          style="
+    <a href="{% url 'booked'%}">
+      <div style="
             width: 470px;
             height: 82px;
             left: 1073px;
@@ -441,14 +365,12 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          Booked flights
-        </div>
-      </a>
+          ">
+        Booked flights
+      </div>
+    </a>
 
-      <img
-        style="
+    <img style="
           width: 26dd5.48px;
           height: 309.77px;
           left: -5px;
@@ -456,11 +378,8 @@
           position: absolute;
           transform: rotate(-10deg);
           transform-origin: 0 0;
-        "
-        src="{% static 'Images/wings1.png' %}"
-      />
-      <img
-        style="
+        " src="{% static 'Images/wings1.png' %}" />
+    <img style="
           width: 26dd5.48px;
           height: 309.77px;
           left: 1670px;
@@ -468,12 +387,9 @@
           position: absolute;
           transform: rotate(370deg);
           transform-origin: 0 0;
-        "
-        src="{% static 'Images/wings2.png' %}"
-      />
-      <a href="{% url 'aboutUs'%}">
-        <div
-          style="
+        " src="{% static 'Images/wings2.png' %}" />
+    <a href="{% url 'aboutUs'%}">
+      <div style="
             width: 254px;
             height: 82px;
             left: 597px;
@@ -486,50 +402,72 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          About us
-        </div>
-      </a>
+          ">
+        About us
+      </div>
+    </a>
+  </div>
+  <script>
+    const planeSelect = document.getElementById("id_plane_name");
+    const bookingTimeInput = document.getElementById("id_booking_time");
+    bookingTimeInput.value = 1;
+    const imageContainer = document.getElementById("plane-image-container");
+    const priceContainer = document.getElementById("price");
+    const totalPriceContainer = document.getElementById("total_price");
+    const planePrices = {
+      light1: 2450,
+      light2: 3250,
+      airline1: 31520,
+      airline2: 21000,
+      heavy1: 5800,
+      heavy2: 8530,
+    };
+    const planeImages = {
+      light1: "{% static 'images/light1.png' %}",
+      light2: "{% static 'images/light2.png' %}",
+      airline1: "{% static 'images/airline1.png' %}",
+      airline2: "{% static 'images/airline2.png' %}",
+      heavy1: "{% static 'images/heavy1.png' %}",
+      heavy2: "{% static 'images/heavy2.png' %}",
+    };
+
+    planeSelect.addEventListener("change", updatePrice);
+    bookingTimeInput.addEventListener("input", updatePrice);
+
+    function updatePrice() {
+      const selectedPlane = planeSelect.value;
+      const bookingTime = parseInt(bookingTimeInput.value) || 1;
+      const price = planePrices[selectedPlane] + "$/h";
+      const totalPrice = planePrices[selectedPlane] * bookingTime;
+
+      imageContainer.innerHTML = `<img src="${planeImages[selectedPlane]}" style="width: 100%; height: 100%; border-radius: 50px;" alt="Plane Image">`;
+      priceContainer.innerHTML = price;
+      totalPriceContainer.innerHTML = `Total price: $${totalPrice}`;
+    }
+    updatePrice();
+  </script>
+  <a href="{%url 'account'%}">
+    <div style="
+                width: 81px;
+                height: 74px;
+                left: 1567px;
+                top: 70px;
+                position: absolute;
+                background: rgba(255, 255, 255, 0.2);
+                color: #d2983a;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 9999px;
+                border: 3px #d2983a solid;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 50px;
+                font-weight: bold;
+                font-family: Parisienne;
+              ">
+      {{ first_letter }}
     </div>
-    <script>
-      const planeSelect = document.getElementById("id_plane_name");
-      const bookingTimeInput = document.getElementById("id_booking_time");
-      bookingTimeInput.value = 1;
-      const imageContainer = document.getElementById("plane-image-container");
-      const priceContainer = document.getElementById("price");
-      const totalPriceContainer = document.getElementById("total_price");
-      const planePrices = {
-        light1: 2450,
-        light2: 3250,
-        airline1: 31520,
-        airline2: 21000,
-        heavy1: 5800,
-        heavy2: 8530,
-      };
-      const planeImages = {
-        light1: "{% static 'images/light1.png' %}",
-        light2: "{% static 'images/light2.png' %}",
-        airline1: "{% static 'images/airline1.png' %}",
-        airline2: "{% static 'images/airline2.png' %}",
-        heavy1: "{% static 'images/heavy1.png' %}",
-        heavy2: "{% static 'images/heavy2.png' %}",
-      };
+  </a>
+</body>
 
-      planeSelect.addEventListener("change", updatePrice);
-      bookingTimeInput.addEventListener("input", updatePrice);
-
-      function updatePrice() {
-        const selectedPlane = planeSelect.value;
-        const bookingTime = parseInt(bookingTimeInput.value) || 1;
-        const price = planePrices[selectedPlane] + "$/h";
-        const totalPrice = planePrices[selectedPlane] * bookingTime;
-
-        imageContainer.innerHTML = `<img src="${planeImages[selectedPlane]}" style="width: 100%; height: 100%; border-radius: 50px;" alt="Plane Image">`;
-        priceContainer.innerHTML = price;
-        totalPriceContainer.innerHTML = `Total price: $${totalPrice}`;
-      }
-      updatePrice();
-    </script>
-  </body>
 </html>

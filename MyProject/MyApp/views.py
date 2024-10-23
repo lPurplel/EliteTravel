@@ -36,7 +36,15 @@ def signUp(request):
         form = RegistrationForm()
 
     print(form.errors)
-    return render(request, 'signUp.html', {'form': form})
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+        'form': form
+    }
+    return render(request, 'signUp.html', context)
 
 
 def signIn(request):
@@ -64,7 +72,29 @@ def signIn(request):
     else:
         form = LoginForm()
 
-    return render(request, 'signIn.html', {'form': form})
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+        'form': form
+    }
+    return render(request, 'signIn.html', context)
+
+
+def account(request):
+    user = request.user
+    password = user.password
+    if request.user.is_authenticated:
+        first_letter = request.user.email[0].upper()
+    else:
+        first_letter = ''
+    context = {
+        'first_letter': first_letter,
+        'password': password,
+    }
+    return render(request, 'account.html', context)
 
 
 def jets(request):

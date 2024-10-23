@@ -2,57 +2,47 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
-  </head>
 
-  <body>
-    <div
-      style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+</head>
+
+<body>
+  <div style="
         width: 1920px;
         height: 1460px;
         position: relative;
         background: #3a3a3a;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      "
-    >
-      <img
-        style="
+      ">
+    <img style="
           width: 1920px;
           height: 1460px;
           left: 0px;
           top: 0px;
           position: absolute;
-        "
-        src="{% static 'Images/back.png' %}"
-      />
+        " src="{% static 'Images/back.png' %}" />
 
-      <div
-        style="
+    <div style="
           width: 1856px;
           height: 117px;
           left: 32px;
           top: 0px;
           position: absolute;
-        "
-      ></div>
+        "></div>
 
-      <img
-        style="
+    <img style="
           width: 525px;
           height: 257px;
           left: 694px;
           top: 162px;
           position: absolute;
-        "
-        src="{% static 'Images/EliteTravel.png' %}"
-      />
+        " src="{% static 'Images/EliteTravel.png' %}" />
 
-      <div
-        style="
+    <div style="
           width: 1854px;
           height: 1004px;
           left: 30px;
@@ -61,11 +51,9 @@
           background: rgba(255, 255, 255, 0.2);
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
+        "></div>
 
-      <div
-        style="
+    <div style="
           left: 338px;
           top: 460px;
           position: absolute;
@@ -76,13 +64,11 @@
           font-weight: 400;
           line-height: 70px;
           word-wrap: break-word;
-        "
-      >
-        Elevate Your Journey, Fly Beyond Expectations.
-      </div>
+        ">
+      Elevate Your Journey, Fly Beyond Expectations.
+    </div>
 
-      <div
-        style="
+    <div style="
           width: 1530px;
           height: 95px;
           left: 195px;
@@ -91,12 +77,10 @@
           background: rgba(255, 255, 255, 0.4);
           border-radius: 50px;
           border: 3px black solid;
-        "
-      ></div>
+        "></div>
 
-      <a href="{% url 'jets' %}">
-        <div
-          style="
+    <a href="{% url 'jets' %}">
+      <div style="
             width: 172px;
             height: 82px;
             left: 900px;
@@ -109,15 +93,13 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          Jets
-        </div>
-      </a>
+          ">
+        Jets
+      </div>
+    </a>
 
-      <a href="{% url 'aboutUs' %}">
-        <div
-          style="
+    <a href="{% url 'aboutUs' %}">
+      <div style="
             width: 254px;
             height: 82px;
             left: 597px;
@@ -130,15 +112,13 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          About us
-        </div>
-      </a>
+          ">
+        About us
+      </div>
+    </a>
 
-      <a href="{% url 'booked' %}">
-        <div
-          style="
+    <a href="{% url 'booked' %}">
+      <div style="
             width: 470px;
             height: 82px;
             left: 1073px;
@@ -151,23 +131,19 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          Booked flights
-        </div>
-      </a>
-      <div
-        style="
+          ">
+        Booked flights
+      </div>
+    </a>
+    <div style="
           width: 81px;
           height: 74px;
           background: rgba(255, 255, 255, 0.2);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           border-radius: 9999px;
           border: 3px #d2983a solid;
-        "
-      ></div>
-      <img
-        style="
+        "></div>
+    <img style="
           width: 941px;
           height: 845px;
           left: 56px;
@@ -175,12 +151,9 @@
           position: absolute;
           border-radius: 50px;
           border: 3px black solid;
-        "
-        src="{% static 'Images/plane.webp' %}"
-      />
+        " src="{% static 'Images/plane.webp' %}" />
 
-      <div
-        style="
+    <div style="
           width: 812px;
           height: 785px;
           left: 1047px;
@@ -193,20 +166,18 @@
           font-weight: 400;
           line-height: 56px;
           word-wrap: break-word;
-        "
-      >
-        Discover the epitome of luxury travel with our private jet booking
-        service. Whether you're seeking unparalleled comfort, privacy, or the
-        convenience of tailored schedules, we provide access to the most
-        prestigious aircraft worldwide. Experience personalized attention,
-        world-class amenities, and seamless travel arrangements that cater to
-        your every need. Your journey begins with us, where luxury knows no
-        bounds and every flight becomes an unforgettable experience. Fly in
-        style, fly with confidence.
-      </div>
+        ">
+      Discover the epitome of luxury travel with our private jet booking
+      service. Whether you're seeking unparalleled comfort, privacy, or the
+      convenience of tailored schedules, we provide access to the most
+      prestigious aircraft worldwide. Experience personalized attention,
+      world-class amenities, and seamless travel arrangements that cater to
+      your every need. Your journey begins with us, where luxury knows no
+      bounds and every flight becomes an unforgettable experience. Fly in
+      style, fly with confidence.
+    </div>
 
-      <img
-        style="
+    <img style="
           width: 265.48px;
           height: 309.77px;
           left: -5px;
@@ -214,12 +185,9 @@
           position: absolute;
           transform: rotate(-10deg);
           transform-origin: 0 0;
-        "
-        src="{% static 'Images/wings1.png' %}"
-      />
+        " src="{% static 'Images/wings1.png' %}" />
 
-      <img
-        style="
+    <img style="
           width: 265.48px;
           height: 309.77px;
           left: 1670px;
@@ -227,21 +195,16 @@
           position: absolute;
           transform: rotate(370deg);
           transform-origin: 0 0;
-        "
-        src="{% static 'Images/wings2.png' %}"
-      />
+        " src="{% static 'Images/wings2.png' %}" />
 
-      <div
-        style="
+    <div style="
           width: 178px;
           height: 82px;
           left: 373px;
           top: 60px;
           position: absolute;
-        "
-      >
-        <div
-          style="
+        ">
+      <div style="
             width: 172px;
             height: 82px;
             left: 3px;
@@ -254,12 +217,10 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          "
-        >
-          Home
-        </div>
-        <div
-          style="
+          ">
+        Home
+      </div>
+      <div style="
             width: 180px;
             height: 0px;
             left: 0px;
@@ -267,31 +228,31 @@
             position: absolute;
             transform-origin: 0 0;
             border: 2px #d2983a solid;
-          "
-        ></div>
-      </div>
+          "></div>
     </div>
-    <div
-      style="
-        width: 81px;
-        height: 74px;
-        left: 1567px;
-        top: 70px;
-        position: absolute;
-        background: rgba(255, 255, 255, 0.2);
-        color: #d2983a;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 9999px;
-        border: 3px #d2983a solid;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 50px;
-        font-weight: bold;
-        font-family: Parisienne;
-      "
-    >
+  </div>
+  <a href="{%url 'account'%}">
+    <div style="
+                  width: 81px;
+                  height: 74px;
+                  left: 1567px;
+                  top: 70px;
+                  position: absolute;
+                  background: rgba(255, 255, 255, 0.2);
+                  color: #d2983a;
+                  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                  border-radius: 9999px;
+                  border: 3px #d2983a solid;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 50px;
+                  font-weight: bold;
+                  font-family: Parisienne;
+                ">
       {{ first_letter }}
     </div>
-  </body>
+  </a>
+</body>
+
 </html>
