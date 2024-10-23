@@ -83,16 +83,14 @@ def signIn(request):
     return render(request, 'signIn.html', context)
 
 
+@login_required
 def account(request):
-    user = request.user
-    password = user.password
     if request.user.is_authenticated:
         first_letter = request.user.email[0].upper()
     else:
         first_letter = ''
     context = {
         'first_letter': first_letter,
-        'password': password,
     }
     return render(request, 'account.html', context)
 

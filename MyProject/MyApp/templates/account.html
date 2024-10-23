@@ -2,44 +2,54 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your account</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your account</title>
-  <link rel="stylesheet" href="{%static 'css/style.css'%}" />
-</head>
-
-<body>
-  <div style="
+  <body>
+    <div
+      style="
         width: 1920px;
         height: 1460px;
         position: relative;
         background: #3a3a3a;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      ">
-    <img style="
+      "
+    >
+      <img
+        style="
           width: 1920px;
           height: 1460px;
           left: 0px;
           top: 0px;
           position: absolute;
-        " src="{%static 'images/back.png'%}" />
-    <div style="
+        "
+        src="{%static 'images/back.png'%}"
+      />
+      <div
+        style="
           width: 1856px;
           height: 117px;
           left: 32px;
           top: 0px;
           position: absolute;
-        "></div>
-    <img style="
+        "
+      ></div>
+      <img
+        style="
           width: 525px;
           height: 257px;
           left: 694px;
           top: 162px;
           position: absolute;
-        " src="{%static 'images/EliteTravel.png'%}" />
-    <div style="
+        "
+        src="{%static 'images/EliteTravel.png'%}"
+      />
+      <div
+        style="
           width: 1854px;
           height: 1004px;
           left: 29px;
@@ -48,19 +58,32 @@
           background: rgba(255, 255, 255, 0.2);
           border-radius: 50px;
           border: 3px black solid;
-        "></div>
-    <div style="
+        "
+      ></div>
+      <div
+        style="
           width: 235px;
           height: 206px;
           left: 839px;
           top: 627px;
           position: absolute;
           background: rgba(255, 255, 255, 0.2);
+          color: #d2983a;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           border-radius: 9999px;
           border: 3px #d2983a solid;
-        "></div>
-    <div style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 150px;
+          font-weight: bold;
+          font-family: Parisienne;
+        "
+      >
+        {{first_letter}}
+      </div>
+      <div
+        style="
           width: 1530px;
           height: 95px;
           left: 195px;
@@ -69,8 +92,10 @@
           background: rgba(255, 255, 255, 0.4);
           border-radius: 50px;
           border: 3px black solid;
-        "></div>
-    <div style="
+        "
+      ></div>
+      <div
+        style="
           width: 1055px;
           height: 97px;
           left: 432px;
@@ -79,20 +104,12 @@
           background: white;
           border-radius: 50px;
           border: 3px black solid;
-        "></div>
-    <div style="
-          width: 477px;
-          height: 96px;
-          left: 432px;
-          top: 1049px;
-          position: absolute;
-          background: white;
-          border-radius: 50px;
-          border: 3px black solid;
-        "></div>
+        "
+      ></div>
 
-    <a href="{% url 'home'%}">
-      <div style="
+      <a href="{% url 'home'%}">
+        <div
+          style="
             width: 172px;
             height: 82px;
             left: 376px;
@@ -105,51 +122,51 @@
             font-weight: 400;
             line-height: 70px;
             word-wrap: break-word;
-          ">
-        Home
+          "
+        >
+          Home
+        </div>
+      </a>
+      <div
+        style="
+          left: 670px;
+          top: 492px;
+          position: absolute;
+          text-align: center;
+          color: #d2983a;
+          font-size: 100px;
+          font-family: Parisienne;
+          font-weight: 400;
+          line-height: 100px;
+          word-wrap: break-word;
+        "
+      >
+        Your Account
       </div>
-    </a>
-    <div style="left: 670px; top: 492px; position: absolute; text-align: center;
-      color: #D2983A; font-size: 100px; font-family: Parisienne; font-weight:
-      400; line-height: 100px; word-wrap: break-word"> Your Account
-    </div>
 
-    <div style="
-        width: 1000px;
-        height: 82px;
-        left: 447px;
-        top: 900px;
-        position: absolute;
-        opacity: 0.5;
-        text-align: left;
-        color: black;
-        font-size: 70px;
-        font-family: Parisienne;
-        font-weight: 400;
-        line-height: 70px;
-        word-wrap: break-word;
-      ">
-      {{user.email}}
-    </div>
-    <div style="
-        width: 310px;
-        height: 89px;
-        left: 440px;
-        top: 1056px;
-        position: absolute;
-        opacity: 0.5;
-        text-align: center;
-        color: black;
-        font-size: 70px;
-        font-family: Parisienne;
-        font-weight: 400;
-        line-height: 70px;
-        word-wrap: break-word;
-      ">
-      {{password}}
+      <div
+        style="
+          width: 1000px;
+          height: 82px;
+          left: 447px;
+          top: 900px;
+          position: absolute;
+          opacity: 0.5;
+          text-align: left;
+          color: black;
+          font-size: 70px;
+          font-family: Parisienne;
+          font-weight: 400;
+          line-height: 70px;
+          word-wrap: break-word;
+        "
+      >
+        {{user.email}}
+      </div>
     </div>
     <a href="{%url 'jets'%}">
-      <div style="
+      <div
+        style="
           width: 172px;
           height: 82px;
           left: 901px;
@@ -162,12 +179,14 @@
           font-weight: 400;
           line-height: 70px;
           word-wrap: break-word;
-        ">
+        "
+      >
         Jets
       </div>
     </a>
     <a href="{%url 'booked'%}">
-      <div style="
+      <div
+        style="
           width: 470px;
           height: 82px;
           left: 1073px;
@@ -180,32 +199,40 @@
           font-weight: 400;
           line-height: 70px;
           word-wrap: break-word;
-        ">
+        "
+      >
         Booked flights
       </div>
     </a>
-    <img style="
-              width: 265.48px;
-              height: 309.77px;
-              left: -5px;
-              top: -45px;
-              position: absolute;
-              transform: rotate(-10deg);
-              transform-origin: 0 0;
-            " src="{% static 'Images/wings1.png' %}" />
+    <img
+      style="
+        width: 265.48px;
+        height: 309.77px;
+        left: -5px;
+        top: -45px;
+        position: absolute;
+        transform: rotate(-10deg);
+        transform-origin: 0 0;
+      "
+      src="{% static 'Images/wings1.png' %}"
+    />
 
-    <img style="
-              width: 265.48px;
-              height: 309.77px;
-              left: 1670px;
-              top: -90px;
-              position: absolute;
-              transform: rotate(370deg);
-              transform-origin: 0 0;
-            " src="{% static 'Images/wings2.png' %}" />
+    <img
+      style="
+        width: 265.48px;
+        height: 309.77px;
+        left: 1670px;
+        top: -90px;
+        position: absolute;
+        transform: rotate(370deg);
+        transform-origin: 0 0;
+      "
+      src="{% static 'Images/wings2.png' %}"
+    />
 
     <a href="{%url 'aboutUs'%}">
-      <div style="
+      <div
+        style="
           width: 254px;
           height: 82px;
           left: 597px;
@@ -218,32 +245,67 @@
           font-weight: 400;
           line-height: 70px;
           word-wrap: break-word;
-        ">
+        "
+      >
         About us
       </div>
     </a>
-    <div style="
+    <div
+      style="
         width: 323px;
         height: 128px;
         left: 432px;
         top: 1216px;
         position: absolute;
-      ">
-      <div style="
+      "
+    >
+      <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button
+          type="submit"
+          style="
+            width: 323px;
+            height: 123px;
+            left: 0px;
+            top: -100px;
+            width: 300px;
+
+            position: absolute;
+            z-index: 1000;
+            background: black;
+            border-radius: 50px;
+            border: 3px black solid;
+            color: #d2983a;
+            font-size: 70px;
+            font-family: Parisienne;
+            font-weight: 400;
+            line-height: 70px;
+            word-wrap: break-word;
+          "
+        >
+          Log out
+        </button>
+      </form>
+
+      {% comment %}
+      <div
+        style="
           width: 323px;
           height: 123px;
           left: 0px;
-          top: 5px;
+          top: -100px;
           position: absolute;
           background: black;
           border-radius: 50px;
           border: 3px black solid;
-        "></div>
-      <div style="
+        "
+      ></div>
+      <div
+        style="
           width: 318px;
           height: 112px;
           left: 0px;
-          top: 0px;
+          top: -90px;
           position: absolute;
           text-align: center;
           color: #d2983a;
@@ -252,32 +314,11 @@
           font-weight: 400;
           line-height: 100px;
           word-wrap: break-word;
-        ">
+        "
+      >
         Log out
       </div>
     </div>
-    <a href="{%url 'account'%}">
-      <div style="
-          width: 81px;
-          height: 74px;
-          left: 1567px;
-          top: 70px;
-          position: absolute;
-          background: rgba(255, 255, 255, 0.2);
-          color: #d2983a;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          border-radius: 9999px;
-          border: 3px #d2983a solid;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 50px;
-          font-weight: bold;
-          font-family: Parisienne;
-        ">
-        {{ first_letter }}
-      </div>
-    </a>
-</body>
-
+    {% endcomment %}
+  </body>
 </html>
